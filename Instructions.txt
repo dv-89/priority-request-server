@@ -1,0 +1,50 @@
+Design and implement a request server that accepts requests. Each request that comes in has a randomly generated priority, 1 being the highest, and 5 being the lowest, and a randomly generated time-to-process between 1 and 5 seconds. The server can only process one request at a time. All requests are generated before the server can start processing them.
+
+The program should support multiple servers!
+
+Example output:
+
+Enter number of requests: 10
+Enter number of servers: 3
+Enter maximum processing time per request: 5
+Received request 1(5,4) // 1 = request id, 5 = priority, 4 = time to process
+Server 0 added 1(5,4)
+Server 0 requests: 1(5,4),
+Received request 2(1,3)
+Server 1 added 2(1,3)
+Server 1 requests: 2(1,3),
+Received request 3(5,5)
+Server 2 added 3(5,5)
+Server 2 requests: 3(5,5),
+Received request 4(2,1)
+Server 0 added 4(2,1)
+Server 0 requests: 4(2,1),1(5,4),
+Received request 5(2,3)
+Server 1 added 5(2,3)
+Server 1 requests: 2(1,3),5(2,3),
+Received request 6(1,2)
+Server 2 added 6(1,2)
+Server 2 requests: 6(1,2),3(5,5),
+Received request 7(5,1)
+Server 0 added 7(5,1)
+Server 0 requests: 4(2,1),7(5,1),1(5,4),
+Received request 8(3,5)
+Server 1 added 8(3,5)
+Server 1 requests: 2(1,3),5(2,3),8(3,5),
+Received request 9(3,2)
+Server 2 added 9(3,2)
+Server 2 requests: 6(1,2),9(3,2),3(5,5),
+Received request 10(1,3)
+Server 0 added 10(1,3)
+Server 0 requests: 10(1,3),4(2,1),7(5,1),1(5,4),
+Server 1 processing request 2(1,3)
+Server 0 processing request 10(1,3)
+Server 2 processing request 6(1,2)
+Server 2 processing request 9(3,2)
+Server 1 processing request 5(2,3)
+Server 0 processing request 4(2,1)
+Server 0 processing request 7(5,1)
+Server 2 processing request 3(5,5)
+Server 0 processing request 1(5,4)
+Server 1 processing request 8(3,5)
+Elapsed time: 11 seconds
